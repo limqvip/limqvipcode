@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F08%2F21%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库基础1]]></title>
+    <url>%2F2018%2F08%2F20%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%801%2F</url>
+    <content type="text"><![CDATA[4.1 关系代数运算传统的几何运算。并、差、交、笛卡尔积等。专门的关系运算。选择、投影、连接等。 4.1.1 关系运算(1)并(Union)(2)差（Difference）(3)交（Intersect） 4.1.2专门的关系运算(1)选择select from students where 性别=’男’(2)投影select 学号，姓名，身份证号 from students(3)连接连接是关系的横向结合。连接运算将两个关系模式拼接成一个更宽的关系模式，生成新关系中包含满足条件的元祖。连接过程是通过连接条件来控制的，连接条件中将出现两个表中的公共属性名，或者具有相同语义、可比的属性。连接结果是满足条件的所有记录，连接运算需要两个表作为操作对象，操作结果产生一个关系。若需要连接两个以上的表，则应当两两进行连接。一般可以描述为：JOIN &lt;关系1&gt; AND &lt;关系2&gt; WHERE &lt;条件&gt;SELECT FROM STUDENTS A INNER JOIN SECORES B ON A.学号=B.学号该命令查出学生表和成绩表中有相同学号的全部信息。]]></content>
+      <categories>
+        <category>math</category>
+        <category>test</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 下 Oracle 命令行工具 Rlwrap]]></title>
+    <url>%2F2018%2F08%2F20%2F%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7rlwrap%2F</url>
+    <content type="text"><![CDATA[如果您对Rlwrap这个工具不是很熟悉，建议参考一下这篇文章： Rlwrap Linux 上实现 Windows 的 SQL*Plus 保存 SQL 历史记录功能，这篇文章描述了如何部署安装 Rlwrap 工具。 这个工具可以理解为在 UNIX 或 Linux 平台下模拟 Windows 下 SQLPlus 的操作习惯（当然不仅限于此），同时在 SQLPlus 中可以模拟 UNIX 或 Linux 的操作习惯，一旦掌握，可以提高在 SQL*Plus 中的操作效率。 以下是我尝试出来的一下快捷键，分享在此。1234567891011121314Ctrl+L 将当前行置顶，相当于完成清屏的动作Ctrl+P 上一条命令Ctrl+N 下一条命令Ctrl+U 从光标处删除到行首Ctrl+W 向前删除一个单词Ctrl+R 增量搜索用过的命令，反复使用Ctrl+R可以向前继续寻找包含关键字的命令，但不能循环Ctrl+T 当前字母与前面的字母交换，最后的时候是最后两个字母交换Ctrl+Z 后台运行，使用fg调出Ctrl+XX 光标最近两次位置交换Ctrl+B 光标向前移动Ctrl+J 相当于Enter键，小心勿执行语句Ctrl+O 相当于Enter键，小心勿执行语句Ctrl+M 相当于Enter键，小心勿执行语句Ctrl+H 相当于Backspace删除键 每一个快捷键都有其适用场合，尤其是Ctrl + L 可以非常便捷的完成清屏的作用，慢慢体会吧。如果您发现了更多有趣的使用方法，欢迎分享。 看一个真正的专家操作命令行绝对是一种很好的体验-光标在单词之间来回穿梭，命令行不同的滚动。在这里强烈建立适应GUI节目的开发者尝试一下在提示符下面工作。但是事情也不是那么简单，还是需要知道“如何去做”。在单词之间跳转，使用 Ctrl + 左右键。Ctrl + a 跳到本行的行首，Ctrl + e 则跳到页尾。Ctrl + u 删除当前光标前面的文字 Ctrl + k -删除当前光标后面的文字 Ctrl + w 和Alt + d 对于当前的单词进行删除操作，w删除光标前面的单词的字符，d 则删除后面的字符Alt + Backsapce 删除当前光标后面的单词，如果删除错误，使用Ctrl + y 进行恢复Ctrl + L 进行清屏操作。]]></content>
+      <categories>
+        <category>Oracle</category>
+      </categories>
+      <tags>
+        <tag>Oracle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第一篇文章]]></title>
+    <url>%2F2018%2F08%2F20%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git配置命令]]></title>
+    <url>%2F2018%2F08%2F20%2Fgit%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[git配置123456789101112131415161718git config --global user.name "limq-debianvm-home"git config --global user.email "gylimingqi@163.com"git config --global push.default simplegit remote add origin git@github.com:dadiqq/nework-git.gitgit remote add origin_soft git@github.com:dadiqq/software.gitgit config --global user.name "debian"git config --global user.email "gylimingqi@163.com"### git config --global push.default simple[root@ora11g ~]# mkdir .ssh[root@ora11g ~]# cd .ssh/ //用ssh-keygen命令来生成密钥对，passphrase我们输入或不输入都行。[root@ora11g .ssh]# ssh-keygen -t rsa -C "gylimigqi@163.com"[root@ora11g etl]# echo 'unset SSH_ASKPASS' &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrcgit remote add origin git@github.com:dadiqq/nework-git.gitgit remote add origin_soft git@github.com:dadiqq/software.gitgit remote add origin git@github.com:dadiqq/VFP.gitgit clone https://github.com/dadiqq/nework-git.gitgit clone https://github.com/dadiqq/VFP.git 设置github上的公钥步骤如下：​ a. 登陆github后 -&gt; “Account Setting” -&gt; “SSH Keys” b. “Add SSH Key” c. Title随便填写一个，Key那里我们把把id_rsa.pub里的内容拷贝进去。 上传12345678910111213141516 env GIT_SSL_NO_VERIFY=true git push[root@ora11g etl]# echo 'unset SSH_ASKPASS' &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc 查看远程库env GIT_SSL_NO_VERIFY=true git remote show origin下载env GIT_SSL_NO_VERIFY=true git clone https://github.com/dadiqq/nework-git.githttps://github.com/dadiqq/nework-git.git git clone git@github.com:dadiqq/nework-git.gitgit remote add origin git@github.com:dadiqq/nework-git.gitgit clone --no-checkout https://github.com/dadiqq/nework-git.git tmpmv tmp/.git ./nework-git/.gitrmdir tmpcd nework-gitgit reset --hard HEADgit push -u origin mastercurl http://curl.haxx.se/ca/cacert.pem -o /etc/pki/tls/certs/ca-bundle.crt 测试ssh -T git@github.com工作的时候经常需要在各个目录之间跳转，可以通过环境变量对目录进行缩写，方便地在多个目录直接切换。在 ~/.bashrc 添加： export wd=”/d/Projects/MyProject/git”export doc=”/d/Projects/documents/“ 下面来验证以上的说法。创建一个空的项目，12345678910$ mkdir project$ cd project$ git init$ vi readme # 添加一行文字并保存，比如“1111”$ git add readme$ git commit -m "1st commit"此时来看仓库中的对象目录$ tree .git/objects/ 如果我们往一个非空的目录下 clone git 项目，就会提示错误信息：fatal: destination path &#39;.&#39; already exists and is not an empty directory. 解决的办法是：123451. 进入非空目录，假设是 /workdir/proj12. git clone --no-checkout https://git.oschina.net/NextApp/platform.git tmp3. mv tmp/.git . #将 tmp 目录下的 .git 目录移到当前目录4. rmdir tmp5. git reset --hard HEAD 然后就可以进行各种正常操作了。 第二方案1234 1. ls -a 2. rm .git/ -rf 跑步 写博客 学习]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2018%2F08%2F20%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[技术来源于折腾折腾了2天我的第一个博客终于搭建完成了，]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2018%2F08%2F20%2Ftest%2F</url>
+    <content type="text"><![CDATA[李白目录（在这里设置锚点） 01. 早发白帝城 02. 赠汪伦 03. 望庐山瀑布 早发白帝城​ 朝辞白帝彩云间， ​ 千里江陵一日还。 ​ 两岸猿声啼不住， ​ 轻舟已过万重山。 赠汪伦​ ​ 李白乘舟将欲行， ​ 忽闻岸上踏歌声。 ​ 桃花潭水深千尺， ​ 不及汪伦送我情。 望庐山瀑布​ 日照香炉生紫烟， ​ 遥看瀑布挂前川。 ​ 飞流直下三千尺， ​ 疑是银行落九天。]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+</search>

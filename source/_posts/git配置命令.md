@@ -6,7 +6,6 @@ categories: life
 ---
 
 ### git配置
-<!--more-->
 ```bash
 git config --global user.name "limq-debianvm-home"
 git config --global user.email "gylimingqi@163.com"
@@ -97,5 +96,11 @@ $ tree .git/objects/
 	1. 
 ls -a  
 	2. 
-rm .git/ -rf  
+rm .git/ -rf 
+
 ```
+
+
+- [ ] 跑步
+- [ ] 写博客
+- [ ] 学习
