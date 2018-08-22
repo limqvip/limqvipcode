@@ -2,7 +2,9 @@
 title: Winddows bat 基础
 date: 2018-08-20 11:13:56
 tags: [bat, Windows]
-categories: bat
+categories: 
+- Program 
+- bat
 ---
 
 ### bat语法
