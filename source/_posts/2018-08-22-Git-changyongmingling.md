@@ -99,7 +99,7 @@ pick 9834843 Update cookbook
 > git reset --hard <commit_id> # 彻底回退到指定 commit
 ```
 
-![img](726930-5079e6da8900d0e2.jpg) 
+![img](2018-08-22-Git-changyongmingling\726930-5079e6da8900d0e2.jpg) 
 
 #### 丢弃本地新添加的文件
 
@@ -119,6 +119,5 @@ pick 9834843 Update cookbook
 
 - 图解Git
 
-  
 
 转载：本文非原创转载[简书](https://www.jianshu.com/p/15e3a4873d1d)

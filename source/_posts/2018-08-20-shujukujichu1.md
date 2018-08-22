@@ -18,7 +18,9 @@ categories:
 (1)并(Union)     
 (2)差（Difference）  
 (3)交（Intersect）
-![图片代替文字](2018-08-20-数据库基础1\Image.png)        
+
+![图片](2018-08-20-shujukujichu1\Image.png)
+
 
 ### 4.1.2专门的关系运算        
 
