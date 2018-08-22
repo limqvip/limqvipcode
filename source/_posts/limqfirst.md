@@ -129,18 +129,17 @@ INFO  Deploy done: git
    安装步骤很简单，但中间走了很多弯路，因此，主要记录一下那些曾经走过的弯路。
 
    1. 新建项目时报错：
-npm WARN deprecated istanbul-lib-hook@1.2.1: 1.2.0 should have
- been a major version bumpnpm ERR! Unexpected end of JSON input while parsing near ‘...registry.npm.taobao.o‘ npm ERR! A complete log of this run can be found in:npm ERR!     
-C:\Users\Admin\AppData\Roaming\npm-cache\_logs\2018-06-08T14_01_13_067Z-debug.logPackage install failed, see above. 如下所示：
+     npm WARN deprecated istanbul-lib-hook@1.2.1: 1.2.0 should have
+      been a major version bumpnpm ERR! Unexpected end of JSON input while parsing near ‘...registry.npm.taobao.o‘ npm ERR! A complete log of this run can be found in:npm ERR!     
+     C:\Users\Admin\AppData\Roaming\npm-cache\_logs\2018-06-08T14_01_13_067Z-debug.logPackage install failed, see above. 如下所示：
 
       解决方法：网上查找的一般是说运行：`npm cache clean --force`，但清除缓存之后，再次新建项目，还是报这个错。然后根据提示信息，取消了淘宝镜像，问题解决。
 
       取消淘宝镜像：
 
       ```bash
-      npm uninstall -g angular-cli 
-      npm uninstall -g @angular/cli 
-      npm cache clean 
+     npm config delete registry
+     npm config delete disturl
       ```
 
       运行 `npm config edit` 可看到 registry 中已经变成了默认镜像。参考：设置和取消淘宝镜像 
