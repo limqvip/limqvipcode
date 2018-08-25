@@ -601,11 +601,11 @@ CREATE DATABASE LINK数据库链接名CONNECT TO 用户名 IDENTIFIED BY 密码 
 数据库参数global_name=true时要求数据库链接名称跟远端数据库名称一样
 
 数据库全局名称可以用以下命令查出
-```plsql
+```sql
 SELECT * FROM GLOBAL_NAME;
 ```
 查询远端数据库里的表
-```plsql
+```sql
 SELECT …… FROM 表名@数据库链接名;
 ```
 #### 五.权限管理 (DCL) 语句
@@ -614,7 +614,7 @@ SELECT …… FROM 表名@数据库链接名;
 常用的系统权限集合有以下三个:
 CONNECT(基本的连接), RESOURCE(程序开发), DBA(数据库管理)
 常用的数据对象权限有以下五个:
-```plsql
+```sql
 ALL         ON 数据对象名,         SELECT ON 数据对象名,         UPDATE ON 数据对象名,
 DELETE         ON 数据对象名,  INSERT ON 数据对象名,   ALTER  ON 数据对象名
 ```
@@ -625,7 +625,7 @@ GRANT SELECT, INSERT, DELETE ON表名 TO 用户名1, 用户名2;
 ```
 2.REVOKE 回收权限
 
-```plsql
+```sql
 REVOKE CONNECT, RESOURCE FROM 用户名;
 REVOKE SELECT ON 表名 FROM 用户名;
 REVOKE SELECT, INSERT, DELETE ON表名 FROM 用户名1, 用户名2;
@@ -633,22 +633,22 @@ REVOKE SELECT, INSERT, DELETE ON表名 FROM 用户名1, 用户名2;
 
 
 查询数据库中第63号错误：
-```plsql
+```sql
 select orgaddr,destaddr from sm_histable0116 where error_code='63';
 ```
 查询数据库中开户用户最大提交和最大下发数： 
-```plsql
+```sql
 select MSISDN,TCOS,OCOS from ms_usertable；
 ```
 
 查询数据库中各种错误代码的总和：
-```plsql
+```sql
 select error_code,count(*) from sm_histable0513 group by error_code order
 by error_code;
 ```
 查询报表数据库中话单统计种类查询。
 
-```plsql
+```sql
 select sum(Successcount) from tbl_MiddleMt0411 where ServiceType2=111
 select sum(successcount),servicetype from tbl_middlemt0411 group by servicetype
 ```
