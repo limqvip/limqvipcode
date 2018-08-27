@@ -38,13 +38,6 @@ date: 2018-08-20 13:16:33
 
 ---
 
-[Sublime Text使用基础](http://www.sublimetextcn.com/)
-
-[**刘未鹏(pongba)**](http://mindhacks.cn/about/)
-
-[技术阅读收藏](https://icehe.github.io/tech/)    	
-[文字阅读收藏](https://icehe.github.io/read/)
-
 
 
 
