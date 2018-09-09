@@ -33,6 +33,181 @@ get update`
 
 ## 安装 Teamview 远程控制软件
 
+# 命令行方式进行teamviewer安装与服务启动
+
+2016年10月05日 18:30:43
+
+ 
+
+阅读数：11311
+
+ 
+
+标签： [teamviewer](http://so.csdn.net/so/search/s.do?q=teamviewer&t=blog) 更多
+
+个人分类： [Linux](https://blog.csdn.net/phone15062117684/article/category/6448045)[teamviewer](https://blog.csdn.net/phone15062117684/article/category/6448046)
+
+
+
+1.Ubuntu KaLi 获取下载：wget -c  url
+
+2.sudo dpkg -i filename 安装下载的文件
+
+3.sudo apt-get -f install 
+
+4.停止服务。执行命令 sudo teamviewer --daemon stop
+5.修改配置文件。 在文件/opt/teamviewer/config/global.conf末尾增加以下内容（由于只读限制，所以可能需要用到管理员权限） 
+[int32] EulaAccepted = 1 
+[int32] EulaAcceptedRevision = 6
+6.重新启动服务 sudo teamviewer --daemon start
+7.获取id并设置密码 teamviewer --info print id 
+8.另外，通过以下命令设置登录密码 sudo teamviewer --passwd [NEWPASSWORD]
+
+9.设置完密码后，需要重新启动服务，才可以看到id，不然是见不到Id的。
+备注：在接受license的步骤存在一个坑，在安装TeamViewer的时候，认为你是以界面形式安装的，所以，会弹出一个对话框，提醒你接受license，但是，由于你用ssh登录的，所以，这个对话框看不到。
+
+10.在实体机上安装teamviewer，输入9中的ID号，然后进行8中的密码验证，成功连上。
+
+# 命令行方式进行teamviewer安装与服务启动
+
+2016年10月05日 18:30:43
+
+ 
+
+阅读数：11311
+
+ 
+
+标签： [teamviewer](http://so.csdn.net/so/search/s.do?q=teamviewer&t=blog) 更多
+
+个人分类： [Linux](https://blog.csdn.net/phone15062117684/article/category/6448045)[teamviewer](https://blog.csdn.net/phone15062117684/article/category/6448046)
+
+
+
+1.Ubuntu KaLi 获取下载：wget -c  url
+
+2.sudo dpkg -i filename 安装下载的文件
+
+3.sudo apt-get -f install 
+
+4.停止服务。执行命令 sudo teamviewer --daemon stop
+5.修改配置文件。 在文件/opt/teamviewer/config/global.conf末尾增加以下内容（由于只读限制，所以可能需要用到管理员权限） 
+[int32] EulaAccepted = 1 
+[int32] EulaAcceptedRevision = 6
+6.重新启动服务 sudo teamviewer --daemon start
+7.获取id并设置密码 teamviewer --info print id 
+8.另外，通过以下命令设置登录密码 sudo teamviewer --passwd [NEWPASSWORD]
+
+9.设置完密码后，需要重新启动服务，才可以看到id，不然是见不到Id的。
+备注：在接受license的步骤存在一个坑，在安装TeamViewer的时候，认为你是以界面形式安装的，所以，会弹出一个对话框，提醒你接受license，但是，由于你用ssh登录的，所以，这个对话框看不到。
+
+10.在实体机上安装teamviewer，输入9中的ID号，然后进行8中的密码验证，成功连上。
+
+
+
+---
+
+# Teamviewer 开机启动
+
+\1. 开机启动teamviewer daemon
+
+```swift
+cd /opt/teamviewer8/tv_bin/script
+sudo cp teamviewerd.sysv /etc/init.d/
+sudo chmod 755 /etc/init.d/teamviewerd.sysv
+sudo update-rc.d teamviewerd.sysv defaults
+```
+
+
+
+\2. 开机启动 teamviewer
+
+System->Perferences->Startup Applications
+
+点击Add
+
+![img](https://img-blog.csdn.net/20130624110217562?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc21pbGV0dHhw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+
+点击Add添加之后关闭Startup Applications.
+
+
+
+这样就可以实现开机启动Teamviewer.
+
+
+
+设置Teamviewer开机启动：
+安装：
+sudo rpm -Uvh teamviewer_RedHat.rpm
+
+安装配置文件
+
+sudo cp /opt/teamviewer8/tv_bin/script/teamviewerd.service /lib/systemd/system/
+设置开机启动
+sudo systemctl enable teamviewerd.service
+现在就启动：
+sudo systemctl start teamviewerd.service
+查看启动状态：
+sudo systemctl status teamviewerd.service
+或是图形方式设置：
+设置开机自动登录：
+system setting -> User Accounts -> Automatic Login (设置为ON）
+然后设置开机运行客户端软件：
+vi ~/.bash_profile
+
+
+
+----
+
+# 命令行方式进行teamviewer安装与服务启动
+
+2016年10月05日 18:30:43
+
+ 
+
+阅读数：11311
+
+ 
+
+标签： [teamviewer](http://so.csdn.net/so/search/s.do?q=teamviewer&t=blog) 更多
+
+个人分类： [Linux](https://blog.csdn.net/phone15062117684/article/category/6448045)[teamviewer](https://blog.csdn.net/phone15062117684/article/category/6448046)
+
+
+
+1.Ubuntu KaLi 获取下载：wget -c  url
+
+2.sudo dpkg -i filename 安装下载的文件
+
+3.sudo apt-get -f install 
+
+4.停止服务。执行命令 sudo teamviewer --daemon stop
+5.修改配置文件。 在文件/opt/teamviewer/config/global.conf末尾增加以下内容（由于只读限制，所以可能需要用到管理员权限） 
+[int32] EulaAccepted = 1 
+[int32] EulaAcceptedRevision = 6
+6.重新启动服务 sudo teamviewer --daemon start
+7.获取id并设置密码 teamviewer --info print id 
+8.另外，通过以下命令设置登录密码 sudo teamviewer --passwd [NEWPASSWORD]
+
+9.设置完密码后，需要重新启动服务，才可以看到id，不然是见不到Id的。
+备注：在接受license的步骤存在一个坑，在安装TeamViewer的时候，认为你是以界面形式安装的，所以，会弹出一个对话框，提醒你接受license，但是，由于你用ssh登录的，所以，这个对话框看不到。
+
+10.在实体机上安装teamviewer，输入9中的ID号，然后进行8中的密码验证，成功连上。 
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+
 # 安装nodejs
 
 1、去官网下载和自己系统匹配的文件：
@@ -234,3 +409,38 @@ zip -r filename.zip file1 file2 file3 /usr/work/school
 
 上面的命令把 file1、file2、 file3、以及 /usr/work/school 目录的内容（假设这个目录存在）压缩起来，然后放入 filename.zip 文件中。
 
+[色温调整护眼软件](https://www.jb51.net/LINUXjishu/596228.html)
+
+```
+xrandr -``-output` `LVDS1 -``-brightness` `0.5
+```
+
+
+
+#### debian终端默认编辑器
+
+今天想加个定时任务, 执行`crontab -e`, 出来的不是熟悉的vim, 
+而是nano, 这玩意也忒难使了, 想换成vim.
+
+搜索出来的结果, ubuntu用select-editor, debian用update-alternative. 
+`update-alternative --config editor`, 列出的可选的编辑器中没有vim, 
+跟vim靠边的也就是个vim.tiny. 这玩意好多的功能都没有.
+
+有的说, 把nano删了, 它会自己找其他的编辑器, 我删除后,没有看到vim.
+
+有的说, 没有vim的用aptitude安装, 就会有vim.basic, 这个选项, 
+可能是因为我的vim是自己编译的, 所以没有这个选项.
+
+后来注意到在`update-alternatives`的输出信息中有/usr/bin/editor这个文件, 
+`ll /usr/bin/editor`, 发现这是一个链接文件, 链接到/etc/alternatives/editor. 
+而这个文件又是链接到/usr/bin/vim.tiny(我上面把nano删了, 
+所以这个链接到vim.tiny), 于是我就把这个文件链接到/usr/local/bin/vim, 
+这是我编译的vim的执行文件. 再`crontal -e`, 进到熟悉的vim了.
+
+不过再次执行`update-alternatives --config editor`, 可选项中还是只有vim.tiny, 
+没有vim. 这个暂时不清楚为什么.
+
+/etc/alternative目录下有好多文件, 而且都是链接文件, 
+估计可以通过修改这文件的指向, 来修改debian的默认行为.
+
+[FreeBSD](http://www.phpfans.net/ask/fansa1/5516915580.html)
