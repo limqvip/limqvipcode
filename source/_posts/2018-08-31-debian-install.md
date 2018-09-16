@@ -443,4 +443,16 @@ xrandr -``-output` `LVDS1 -``-brightness` `0.5
 /etc/alternative目录下有好多文件, 而且都是链接文件, 
 估计可以通过修改这文件的指向, 来修改debian的默认行为.
 
-[FreeBSD](http://www.phpfans.net/ask/fansa1/5516915580.html)
+[为什么要学FreeBSD? FreeBSD魅力何在](http://www.phpfans.net/ask/fansa1/5516915580.html)
+[FreeBSD 与 Linux 比较 ](https://blog.csdn.net/dankes/article/details/2822669)
+
+[FreeBSD 安装](https://blog.csdn.net/huyouxz/article/details/38920935)
+
+我看过的FreeBSD的书籍有
+王波写的《freeBSD使用大全》第二版
+张 青翻译的《freeBSD手册》
+《The Complete FreeBSD》（正在看）
+
+为什么选择[FreeBSD](https://blog.csdn.net/u011536670/article/details/51107132)
+
+[区别](http://www.361way.com/unix-bsd/1513.html)
