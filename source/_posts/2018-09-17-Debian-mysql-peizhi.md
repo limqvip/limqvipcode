@@ -126,7 +126,9 @@ conn.close()
 
 ----
 
+[Python3 连接 Mysql](https://www.cnblogs.com/sheng-247/p/7681039.html)
 
+------
 
 
 
