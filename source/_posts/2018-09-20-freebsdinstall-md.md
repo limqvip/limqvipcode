@@ -269,3 +269,8 @@ gdm_enable="YES"
 
 
 
+[FreeBSD安装各种字体](https://www.linuxidc.com/Linux/2014-02/96133.htm)
+
+[[最近几天玩freebsd奋斗成果总结](http://www.cnblogs.com/william-lee/archive/2015/08/26/4761358.html)
+
+[bsd博客很多](https://www.cnblogs.com/x3d/category/409118.html)
