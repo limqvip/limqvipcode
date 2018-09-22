@@ -1,4 +1,6 @@
 # limqvipcode
+git与github安装、配置、pull、push
+https://www.cnblogs.com/qiaoconglovelife/p/5506643.html
 limqvip.github.io code
 5 pull、fetch与clone
 　　pull与push相反，是将代码从远程仓库同步至本地仓库并merge的命令
