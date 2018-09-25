@@ -128,7 +128,63 @@ conn.close()
 
 [Python3 连接 Mysql](https://www.cnblogs.com/sheng-247/p/7681039.html)
 
-------
+
+
+----
+
+# inux打通两台机器的ssh功能（linux远程连接可以不输入密码）
+
+2017年05月25日 17:58:01 
+
+标签： [linux](http://so.csdn.net/so/search/s.do?q=linux&t=blog)[ssh](http://so.csdn.net/so/search/s.do?q=ssh&t=blog)[免密](http://so.csdn.net/so/search/s.do?q=%E5%85%8D%E5%AF%86&t=blog)更多
+
+个人分类： [ssh](https://blog.csdn.net/yan_wenliang/article/category/6938951)
+
+
+
+> **注意：** 
+> .ssh 这个文件夹需要有700权限 
+> 执行**chmod -R 700 .ssh && chmod 700 .ssh/. && chmod 700 .ssh/..** 
+> 记住，两个隐藏文件夹也要有700权限。
+
+ssh-copy-id 方法：
+
+```java
+//到用户目录
+cd
+
+//生成一对密钥：id_rsa（私钥）和id_rsa.pub（公钥），保存在~/.ssh目录。
+//遇到停顿，一直回车就可以。
+//如果之前生成过，不用操作这个步骤
+ssh-keygen -t rsa
+
+//将公钥拷贝到目标机器，需要密码
+ssh-copy-id -i ~/.ssh/id_rsa.pub $username@$ip12345678910
+```
+
+scp方法
+
+```java
+cd           
+
+//如果之前生成过，不用操作这个步骤
+ssh-keygen -t rsa
+
+scp ~/.ssh/id_dsa.pub $username@$ip:~/.ssh/source-machine-key
+
+//登录到目标主机，这次需要密码
+ssh $username@$ip
+
+cat ~/.ssh/source-machine-key >> ~/.ssh/authorized_keys
+```
+
+
+
+
+
+
+
+-----
 
 
 

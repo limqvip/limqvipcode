@@ -456,3 +456,12 @@ xrandr -``-output` `LVDS1 -``-brightness` `0.5
 为什么选择[FreeBSD](https://blog.csdn.net/u011536670/article/details/51107132)
 
 [区别](http://www.361way.com/unix-bsd/1513.html)
+
+
+
+[LINUX有点](https://www.zhihu.com/question/21219829/answer/21683553)
+
+[linux](https://www.zhihu.com/question/58083256/answer/155734077)
+
+[你是如何学习 *Linux* 编程的？](https://www.zhihu.com/question/20730157/answer/82034823)(https://www.zhihu.com/question/20730157/answer/82034823)
+
