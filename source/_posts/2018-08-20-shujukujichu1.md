@@ -18,7 +18,6 @@ categories:
 (1)并(Union)     
 (2)差（Difference）  
 (3)交（Intersect）
-
 ![图片](2018-08-20-shujukujichu1\Image.png)
 
 
